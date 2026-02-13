@@ -11,7 +11,6 @@ Always try to answer in short sentences, limit yourself to the questions. Answer
 ## Resources
 - Library docs: ./docs/
 - My snippets: ./snippets/
-- This project: ./projects
 
 ## When I ask about X
 - Read relevant files directly
