@@ -1,4 +1,4 @@
-# claude-rag
+# Augmented Search
 
 Local documentation RAG system for Claude Code. Answer questions using only local docs, no web search.
 
