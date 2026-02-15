@@ -45,7 +45,30 @@ ssh root@95.217.xxx.xxx
 ## Server Configuration
 
 - Run: `apt update && apt upgrade -y`
+- Run: `sudo apt install unattended-upgrades`
+- Run: `sudo dpkg-reconfigure --priority=low unattended-upgrades`
 - Install Tailscale: `curl -fsSL https://tailscale.com/install.sh | sh`
+
+### SSH Confifg
+```
+sudo sshd -T | grep -E "permitrootlogin|passwordauthentication"
+```
+
+Should show:
+```
+permitrootlogin without-password
+passwordauthentication no
+```
+To do it: `sudo nano /etc/ssh/sshd_config`
+
+**Find this line:**
+```
+#PasswordAuthentication yes
+```
+
+**Change it to (uncomment and set to no):**
+```
+PasswordAuthentication no
 
 ## Enable IP Forwarding
 ```bash
